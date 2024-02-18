@@ -1,0 +1,16 @@
+.overlay::before {
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(
+    to top,
+    #1b13132f 0%,
+    rgba(24, 17, 17, 0.689) 100%
+  );
+}

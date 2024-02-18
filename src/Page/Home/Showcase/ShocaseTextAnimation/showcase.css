@@ -1,0 +1,50 @@
+.txt-style {
+  -webkit-text-stroke-width: 2px;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+}
+
+.container:before,
+.container:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.container:before {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+  left: 0;
+}
+
+.container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+
+.marque {
+  animation: 35s move-rtl infinite linear;
+  display: inline-block;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
